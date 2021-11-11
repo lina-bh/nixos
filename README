@@ -1,0 +1,4 @@
+if you are wondering, I import the nix expressions in this repository flatly
+from configuration.nix, which I then use as a scrapbook for configuration
+specific to whatever I'm doing at the moment that I don't necessarily want to
+tie to the configuration of this machine.

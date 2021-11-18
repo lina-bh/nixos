@@ -4,13 +4,7 @@
     chmod -R ug=rwX,o=rX /etc/nixos
   '';
 
-  time.timeZone = "Europe/London";
-  i18n.defaultLocale = "en_GB.UTF-8";
-  console = { keyMap = "uk"; };
-  services.xserver = {
-    layout = "gb";
-    xkbOptions = "compose:ralt";
-  };
+  i18n.supportedLocales = [ "en_US.UTF-8/UTF-8" "en_GB.UTF-8/UTF-8" ];
 
   users.users.lina = {
     isNormalUser = true;

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   networking.networkmanager.enable = true;
 
   services.xserver = {
@@ -22,5 +22,10 @@
 
   services.earlyoom.enable = true;
 
-  environment.systemPackages = with pkgs; [ spectacle ];
+  services.mullvad-vpn.enable = true;
+
+  users.users.lina = {
+    extraGroups = [ "networkmanager" ];
+    packages = with pkgs; [ spectacle mullvad-vpn xsel gitFull ];
+  };
 }

@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./uk.nix ];
+  imports = [ ./uk.nix ./gui.nix ./laptop.nix ];
 
   networking.hostName = "t480s";
 

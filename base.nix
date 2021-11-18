@@ -1,7 +1,9 @@
 { pkgs, ... }: {
   nix = {
     autoOptimiseStore = true;
-    package = pkgs.nix_2_3;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
   };
 
   nixpkgs.config = {
